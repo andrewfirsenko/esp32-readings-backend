@@ -11,7 +11,7 @@ import FluentSQLiteDriver
 public func configure(_ app: Application) async throws {
     // DB
     if app.environment.isRelease {
-        app.databases.use(.sqlite(.file("esp32-measurements-db.sqlite")), as: .sqlite)
+        app.databases.use(.sqlite(.file("databases/esp32-measurements-db.sqlite")), as: .sqlite)
     } else {
         app.databases.use(.sqlite(.memory), as: .sqlite)
     }
